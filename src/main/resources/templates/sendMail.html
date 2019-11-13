@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>测试邮件发送</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        a:visited {
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+<button><a th:href="@{/mailapi/sendMail?receiver=yangchaozheng@joyintech.com}">发送到：yangchaozheng@joyintech.com</a>
+</button>
+<button><a th:href="@{/mailapi/sendMail?receiver=hongliulu@joyintech.com}">发送到：hongliulu@joyintech.com</a></button>
+<button><a th:href="@{/mailapi/sendMail?receiver=lining1@ebscn.com}">发送到：lining1@ebscn.com</a></button>
+<button><a th:href="@{/mailapi/sendMail?receiver=imm_hs@163.com}">发送到：imm_hs@163.com</a></button>
+<button><a th:href="@{/mailapi/showSysProp}">查看SystemProperties</a></button>
+
+<p th:text="${msg}"></p>
+<p th:utext="${SystemProperties}"></p>
+</body>
+</html>
